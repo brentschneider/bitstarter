@@ -1,8 +1,9 @@
-# node-js-sample
 
-This is a barebones Node.js app using the [Express](http://expressjs.com/) framework.
+# Bitstarter project
 
-## Running Locally
+This project uses Node.js app, the [Express](http://expressjs.com/) framework and [Bootstrap](http://twitter.github.io/bootstrap/).
+
+## Running in dev environment
 
 Asumming you have [Node.js](http://nodejs.org/) and [Heroku Toolbelt](https://toolbelt.heroku.com/) installed on your machine:
 
@@ -17,21 +18,16 @@ Your app should now be running on [localhost:5000](http://localhost:5000/).
 
 ## Deploying to Heroku
 
+Add AWS RSA key to heroku `heroku keys:add ~/.ssh/id_rsa.pub`
+
+Create app
+
 ```
 heroku create
 git push heroku master
 heroku open
 ```
-If you get the following error:
 
-```
-Permission denied (publickey).
-fatal: The remote end hung up unexpectedly
-```
-Fix by adding your ker to heroku:
-```
-heroku keys:add ~/.ssh/id_rsa.pub
-```
 
 ## Documentation
 
