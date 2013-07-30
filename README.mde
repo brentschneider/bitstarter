@@ -18,21 +18,16 @@ Your app should now be running on [localhost:5000](http://localhost:5000/).
 
 ## Deploying to Heroku
 
+Add AWS RSA key to heroku `heroku keys:add ~/.ssh/id_rsa.pub`
+
+Create app
+
 ```
 heroku create
 git push heroku master
 heroku open
 ```
-If you get the following error:
 
-```
-Permission denied (publickey).
-fatal: The remote end hung up unexpectedly
-```
-Fix by adding your ker to heroku:
-```
-heroku keys:add ~/.ssh/id_rsa.pub
-```
 
 ## Documentation
 
