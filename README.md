@@ -14,7 +14,32 @@ npm install
 foreman start
 ```
 
-Your app should now be running on [localhost:5000](http://localhost:5000/).
+## Troubleshooting Tips: 
+
+1. Issue: When creating server (Warning: express.createServer() is deprecated, express 
+applications no longer inherit from http.Server)
+
+        var express = require('express');
+        
+        var app = express();
+        
+        app.get('/', function(request, response){
+        response.send('hello world');
+        });
+        
+        app.listen(8080);
+
+
+2. Issue: (Error: listen EADDRINUSE)
+EADDRINUSE means that the port is already in use. It may not be gracefull but I found this worked.
+
+        pkill node
+
+now run `node yourfile.js`
+Your app should now be running on [localhost:8080](http://localhost:8080/).
+
+
+
 
 ## Deploying to Heroku
 
