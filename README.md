@@ -16,8 +16,12 @@ foreman start
 
 ## Troubleshooting Tips: 
 
-1. Issue: When creating server (Warning: express.createServer() is deprecated, express 
-applications no longer inherit from http.Server)
+1. Issue: When creating server
+
+        (Warning: express.createServer() is deprecated, express 
+        applications no longer inherit from http.Server)
+        
+change to
 
         var express = require('express');
         
@@ -28,6 +32,11 @@ applications no longer inherit from http.Server)
         });
         
         app.listen(8080);
+
+Also change express version dependencies:
+
+    -    "express": "2.5.x"
+    +    "express": "~3.3.4"
 
 
 2. Issue: (Error: listen EADDRINUSE)
