@@ -1,20 +1,22 @@
 // Define routes for simple SSJS web app. 
-// Writes Coinbase orders to database.
-var async   = require('async')
-  , express = require('express')
-  , fs      = require('fs')
-  , http    = require('http')
-  , https   = require('https')
-  , db      = require('./models');
 
+var express = require("express");
 var app = express();
-app.set('views', __dirname + '/views');
-app.set('view engine', 'ejs');
-app.set('port', process.env.PORT || 8080);
+var fs = require('fs');
+app.use(express.logger());
 
-// Render homepage (note trailing slash): example.com/
+// Set up  Env
+
 app.get('/', function(request, response) {
-  var data = fs.readFileSync('index.html').toString();
-  response.send(data);
+ var data =fs.readFileSync('index.html' ,'utf8');
+ response.send(data.toString());  
+ 
 });
 
+// set PORT
+var port = process.env.PORT ||8080;
+
+// Lets Do it
+app.listen(port, function() {
+ console.log("Listening on " + port);
+});
