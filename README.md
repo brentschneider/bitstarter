@@ -1,7 +1,22 @@
 
-# Bitstarter project
+# Summer 2013 - Bitstarter project
+
+Startup Engineering: Stanford CS184 startup-class
+
+```
+clone your own fork: https://github.com/startup-class
+```
+
+## The Result
+
+[Hello Study Buddy] (http://hellostudybuddy.com)
 
 This project uses Node.js app, the [Express](http://expressjs.com/) framework and [Bootstrap](http://twitter.github.io/bootstrap/).
+
+ - code repo on [github] (https://github.com/brentschneider/bitstarter) 
+ - developed using Amazon Web Services
+ - deployed to [Heroku] (http://shrouded-falls-3722.herokuapp.com/)
+ 
 
 ## Running in dev environment
 
@@ -14,7 +29,7 @@ npm install
 foreman start
 ```
 
-## Troubleshooting Tips: 
+## Troubleshooting: 
 
 1. Issue: When creating server
 
@@ -45,7 +60,10 @@ EADDRINUSE means that the port is already in use. It may not be gracefull but I 
         pkill node
 
 now run `node yourfile.js`
+
 Your app should now be running on [localhost:8080](http://localhost:8080/).
+
+(note to self: man nohup, read nodejitsu's [article] (http://blog.nodejitsu.com/keep-a-nodejs-server-up-with-forever)
 
 
 
